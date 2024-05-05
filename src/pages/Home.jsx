@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import digitaldocuments from "../images/digitaldocuments.png";
 import sustainablestocks from "../images/sustainablestocks.png";
 import ecotokenmarketplace from "../images/ecotokenmarketplace.png";
 import sustainablebudgeting from "../images/sustainablebudgeting.png";
+
 
 function Home() {
   return (
@@ -17,22 +19,27 @@ function Home() {
       </div>
       
       <div className="button-container flex justify-center"> {/* Center the buttons */}
-        <button className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+      <Link to="/digitaldocuments" className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center"> {/* Use Link to navigate */}
+        <button className="button flex flex-col justify-center items-center">
           <div className="text-center text-xl">Digital Services</div>
           <img src={digitaldocuments} alt="" className="mt-2 pt-4" />
         </button>
-        <button className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        </Link>
+        <Link to="/sustainablestocks" className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        <button className="button flex flex-col justify-center items-center">
           <div className="text-center text-xl">Sustainable Stocks</div>
           <img src={sustainablestocks} alt="" className="mt-2 pt-4" />
-        </button>
-        <button className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        </button></Link>
+        <Link to="/ecotokenmarketplace" className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        <button className="button flex flex-col justify-center items-center">
           <div className="text-center text-xl">Eco Token Marketplace</div>
           <img src={ecotokenmarketplace} alt="" className="mt-2 pt-4" />
-        </button>
-        <button className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        </button></Link>
+        <Link to="/sustainablebudgeting" className="button w-1/5 h-64 shadow-md m-2 flex flex-col justify-center items-center">
+        <button className="button flex flex-col justify-center items-center">
           <div className="text-center text-xl">Sustainable Budgeting</div>
           <img src={sustainablebudgeting} alt="" className="mt-2 pt-4" />
-        </button>
+        </button></Link>
       </div>
       <div className="m-8 flex flex-col justify-center items-center">
         <p className="flex"><p>Don't have an account?</p> <p className="text-blue-400 pl-2 pr-2">SignUp</p> <p>now</p></p>
